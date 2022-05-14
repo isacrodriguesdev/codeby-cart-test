@@ -17,16 +17,19 @@ export default function Products() {
     const products = await getProductsController.execute()
     setProducts(products)
   }
-  
+
   return (
-    <div className="">
-     {
-       products.map(product => (
-         <div>
-           <p>{product.name}</p>
-         </div>
-       ))
-     }
+    <div className="container">
+      <div className={styles.ContainerProduct}>
+        {
+          products.map(product => (
+            <div>
+              <p>{product.name}</p>
+              <p>R${product.price / 100}</p>
+            </div>
+          ))
+        }
+      </div>
     </div>
   )
 }
