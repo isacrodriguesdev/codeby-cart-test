@@ -3,4 +3,6 @@ export class Product {
   public imageUrl: string;
   public price: number;
   public name: string;
+
+  constructor(public readonly product: Product) { }
 }
