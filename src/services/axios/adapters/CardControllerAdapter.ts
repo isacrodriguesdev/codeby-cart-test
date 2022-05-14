@@ -4,22 +4,13 @@ import { ICardControllerAdapter } from "@/services/ICardControllerAdapter";
 
 export class CardControllerAdapter implements ICardControllerAdapter {
 
-  async getLowProducts(): Promise<Product[]> {
+  async getProducts(): Promise<Product[]> {
     const response = await axios.get(
-      "https://raw.githubusercontent.com/isacrodriguesdev/codeby-cart-test/main/__database/low_products.json"
+      "https://raw.githubusercontent.com/isacrodriguesdev/codeby-cart-test/main/__database/products.json"
     )
-    return response.data.map((product: any) => {
+
+    return response.data.items.map((product: any) => {
       return new Product(product)
     })
   }
-
-  async getHighProducts(): Promise<Product[]> {
-    const response = await axios.get(
-      "https://raw.githubusercontent.com/isacrodriguesdev/codeby-cart-test/main/__database/high_products.json"
-    )
-    return response.data.map((product: any) => {
-      return new Product(product)
-    })
-  }
-
 }

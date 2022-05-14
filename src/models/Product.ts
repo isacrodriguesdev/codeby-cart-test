@@ -4,5 +4,10 @@ export class Product {
   public price: number;
   public name: string;
 
-  constructor(public readonly product: Product) { }
+  constructor(product: Product) {
+    this.id = product.id
+    this.imageUrl = product.imageUrl
+    this.name = product.name
+    this.price = product.price
+   }
 }
