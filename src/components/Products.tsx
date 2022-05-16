@@ -3,7 +3,7 @@ import { GetProductsFactory } from "@/useCases/GetProductsFactory"
 import { useEffect, useState } from "react"
 import styles from "../styles/Home.module.css"
 
-export default function Products() {
+export function Products() {
 
   const getProductsController = GetProductsFactory()
 
@@ -20,7 +20,7 @@ export default function Products() {
 
   return (
     <div className="container">
-      <div className={styles.ContainerProduct}>
+      <div className={styles.ContainerShoppingCart}>
         {
           products.map(product => (
             <div>

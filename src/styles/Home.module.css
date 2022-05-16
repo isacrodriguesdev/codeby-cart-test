@@ -1,7 +1,13 @@
 
-.ContainerProduct {
-  display: grid;
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-  grid-template-columns: repeat(3, 1fr);
+.ContainerShoppingCart {
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.ProductItem {
+  display: flexbox;
+  flex-direction: row;
+  /* grid-template-columns: repeat(3, 1fr); */
 }
